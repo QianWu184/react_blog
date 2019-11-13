@@ -5,7 +5,7 @@ import '../public/style/components/author.css';
 const Author = () => {
   const [author, setAuthor] = useState({
     name: "WQ",
-    place: '初学',
+    place: '成都',
     markwords: `成长伴随着痛苦和挫折`,
     imgUrl: "../img/author2.jpg",
     count: ["qq", "wechat", "github"]
@@ -23,7 +23,7 @@ const Author = () => {
         </div>
         <Divider>社交账号</Divider>
         {
-          author.count.map(item => <Avatar size={28}  icon={item} className="countItem"></Avatar>)
+          author.count.map((item, index) => <Avatar size={28} key={index} icon={item} className="countItem"></Avatar>)
         }
       </div>
     </div>

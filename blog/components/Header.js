@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import "../public/style/components/header.css";
 import { Row, Col, Menu, Icon } from "antd";
 
@@ -15,14 +16,17 @@ const Header = () => {
             <Menu.Item key="home">
               <Icon type="home"></Icon>
               首页
+              <Link href='/'><a></a></Link>
             </Menu.Item>
             <Menu.Item key="youtube">
               <Icon type="youtube"></Icon>
               技术
+              <Link href='/detailed'><a></a></Link>
             </Menu.Item>
             <Menu.Item key="life">
               <Icon type="smile"></Icon>
               生活
+              <Link href='/list'><a></a></Link>
             </Menu.Item>
           </Menu>
         </Col>
