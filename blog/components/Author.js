@@ -6,7 +6,7 @@ const Author = () => {
   const [author, setAuthor] = useState({
     name: "WQ",
     place: '成都',
-    markwords: `成长伴随着痛苦和挫折`,
+    markwords: `成长是一个变得不再<br/>随心所欲的过程`,
     imgUrl: "../img/author2.jpg",
     count: ["qq", "wechat", "github"]
   });
