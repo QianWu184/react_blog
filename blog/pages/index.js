@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Header from "../components/Header";
 import Author from '../components/Author';
 import Advart from '../components/Advart';
+import Footer from '../components/Footer';
 import { Row, Col, List, Icon, Avatar } from "antd";
 import "../public/style/pages/index.css";
 
@@ -17,6 +19,8 @@ const Home = () => {
   const [mylist, setMylist] = useState([
     {
       title: "涤魂圣枪-赛娜",
+      hero: 'Senna',
+      heroId: 235,
       imgUrl: `../img/hero.png`,
       description: `我故乡的岛上有一种说法。“狂风为了说话，盗走人的呼吸。”你想让我描述我带着罩帽、背着圣物火炮，刚到这座艾欧尼亚村庄时迎来的黑雾？`,
       context: `赛娜的光明哨兵之路是从黑暗开始的。一切要从黑雾说起……
@@ -28,6 +32,8 @@ const Home = () => {
     },
     {
       title: "涤魂圣枪-赛娜",
+      hero: 'Senna',
+      heroId: 235,
       imgUrl: `../img/hero2.png`,
       description: `我故乡的岛上有一种说法。“狂风为了说话，盗走人的呼吸。”你想让我描述我带着罩帽、背着圣物火炮，刚到这座艾欧尼亚村庄时迎来的黑雾？`,
       context: `赛娜的光明哨兵之路是从黑暗开始的。一切要从黑雾说起……
@@ -39,6 +45,8 @@ const Home = () => {
     },
     {
       title: "圣枪游侠-赛娜",
+      hero: 'Senna',
+      heroId: 235,
       imgUrl: `../img/hero.png`,
       description: `我故乡的岛上有一种说法。“狂风为了说话，盗走人的呼吸。”你想让我描述我带着罩帽、背着圣物火炮，刚到这座艾欧尼亚村庄时迎来的黑雾？`,
       context: `赛娜的光明哨兵之路是从黑暗开始的。一切要从黑雾说起……
@@ -50,6 +58,8 @@ const Home = () => {
     },
     {
       title: "涤魂圣枪-赛娜",
+      hero: 'Senna',
+      heroId: 235,
       imgUrl: `../img/hero2.png`,
       description: `我故乡的岛上有一种说法。“狂风为了说话，盗走人的呼吸。”你想让我描述我带着罩帽、背着圣物火炮，刚到这座艾欧尼亚村庄时迎来的黑雾？`,
       context: `赛娜的光明哨兵之路是从黑暗开始的。一切要从黑雾说起……
@@ -104,9 +114,11 @@ const Home = () => {
                     <Avatar src="../img/user.jpg" />
                   }
                   title={
-                    <a className="list-title" href="/">
+                    <Link href={{pathname:'/detailed',query:{heroId:item.heroId}}}>
+                      <a className="list-title">
                       {item.title}
                     </a>
+                    </Link>
                   }
                   description={item.description}
                 />
@@ -120,6 +132,7 @@ const Home = () => {
           <Advart></Advart>
         </Col>
       </Row>
+      <Footer></Footer>
     </div>
   );
 };

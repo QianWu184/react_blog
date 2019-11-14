@@ -1,0 +1,28 @@
+.detail-card{
+  position: relative;
+}
+.detail-card > img{
+  width: 100%;
+}
+.detail-card-left{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5% 0;
+  color: white;
+  text-align: center;
+}
+.strong-list{
+  font-size: .3rem;
+  margin: 0px;
+  padding: 0px;
+}
+.strong-line{
+  width: 50%;
+}
+.detail-card-left > h1{
+  color: white;
+}
