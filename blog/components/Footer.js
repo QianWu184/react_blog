@@ -7,7 +7,7 @@ const Footer = () => (
       使用react-next-antd Design制作
     </div>
     <div>
-      qianwu184@gmail.com
+      https://github.com/QianWu184
     </div>
   </div>
 )

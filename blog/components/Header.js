@@ -21,12 +21,12 @@ const Header = () => {
             <Menu.Item key="youtube">
               <Icon type="youtube"></Icon>
               技术
-              <Link href='/detailed'><a></a></Link>
+              <Link href='/'><a></a></Link>
             </Menu.Item>
             <Menu.Item key="life">
               <Icon type="smile"></Icon>
               生活
-              <Link href='/list'><a></a></Link>
+              <Link href='/'><a></a></Link>
             </Menu.Item>
           </Menu>
         </Col>

@@ -16,7 +16,7 @@
   text-align: center;
 }
 .strong-list{
-  font-size: .3rem;
+  font-size: .5rem;
   margin: 0px;
   padding: 0px;
 }
@@ -25,4 +25,31 @@
 }
 .detail-card-left > h1{
   color: white;
+}
+.detail-card-bottom{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+.hero-skin{
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 5px;
+}
+.hero-skin >img{
+  width: 100%;
+  height: 100%;
+}
+.active{
+  outline: 4px solid rgb(30,144,255);
+}
+.tags{
+  margin: 10px 0
+}
+.logo{
+  margin: 2rem 0
+}
+.logo>img{
+  width: 100%
 }
