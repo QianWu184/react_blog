@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Icon, Avatar, Divider } from "antd";
+import {Popover, Avatar, Divider } from "antd";
 import '../public/style/components/author.css';
 
 const Author = () => {
@@ -8,8 +8,9 @@ const Author = () => {
     place: '成都',
     markwords: `成长是一个变得不再<br/>随心所欲的过程`,
     imgUrl: "../img/author2.jpg",
-    count: ["qq", "wechat", "github"]
+    count: [{ type: "qq", number: '532140450' }, { type: "wechat", number: "wq532140450" }, {type:"github", number: 'https://github.com/QianWu184' }]
   });
+  //<Popover content={content} title="Title">
   return (
     <div className="author">
       <div>
@@ -23,7 +24,7 @@ const Author = () => {
         </div>
         <Divider>社交账号</Divider>
         {
-          author.count.map((item, index) => <Avatar size={28} key={index} icon={item} className="countItem"></Avatar>)
+          author.count.map((item, index) => <Popover content={item.number}><Avatar size={28} key={index} icon={item.type} className="countItem"></Avatar></Popover>)
         }
       </div>
     </div>

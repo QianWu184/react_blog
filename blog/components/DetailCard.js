@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Progress, Tag } from "antd";
+import { Progress, Tag, Icon } from "antd";
 import { DetailedContext } from "../Common/common";
 
 import "../public/style/components/detailcard.css";
@@ -30,6 +30,7 @@ const DetailCard = () => {
                   <Tag key={index} color="#87d068">{tags[item]}</Tag>
                 )
               }
+              return null
             })
           }
         </div>
@@ -71,7 +72,7 @@ const DetailCard = () => {
           </li>
         </ul>
         <div className="logo">
-          <img src="https://game.gtimg.cn/images/lol/v3/logo-public.png" />
+          <img src="https://game.gtimg.cn/images/lol/v3/logo-public.png" alt=""/>
         </div>
       </div>
       <div className="detail-card-bottom">
@@ -80,10 +81,11 @@ const DetailCard = () => {
             if (item.iconImg) {
               return (
                 <div className={["hero-skin", choose === index ? "active" : null].join(' ')} key={index} onClick={() => { setChoose(index) }}>
-                  <img src={item.iconImg} />
+                  <img src={item.iconImg} alt="" />
                 </div>
               )
             }
+            return null
           })
         }
       </div>
