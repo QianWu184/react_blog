@@ -24,7 +24,7 @@ const Author = () => {
         </div>
         <Divider>社交账号</Divider>
         {
-          author.count.map((item, index) => <Popover content={item.number}><Avatar size={28} key={index} icon={item.type} className="countItem"></Avatar></Popover>)
+          author.count.map((item, index) => <Popover content={item.number} key={index}><Avatar size={28} key={index} icon={item.type} className="countItem"></Avatar></Popover>)
         }
       </div>
     </div>

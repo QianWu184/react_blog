@@ -1,6 +1,6 @@
 .list-title{
     font-size:1.3rem;
-    color: #1e90ff;
+    color: #1e90ff !important;
     padding: 0 0.5rem;
 }
 .list-news{
@@ -18,4 +18,7 @@
 .list-icon span{
     display: inline-block;
     padding: 0 10px;
+}
+.ant-list-pagination {
+  text-align: center;
 }

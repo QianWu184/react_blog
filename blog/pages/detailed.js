@@ -36,10 +36,8 @@ const Detailed = (data) => {
   )
 }
 Detailed.getInitialProps = async (router) => {
-  console.log(`已经收到的id是${router.query.heroId},但是我想临时随机用一个id`)
-  const id = 1 + Math.floor(Math.random()*(146))
   const promise =new Promise((resolve)=>{
-    axios(`https://game.gtimg.cn/images/lol/act/img/js/hero/${id}.js`).then(
+    axios(`https://game.gtimg.cn/images/lol/act/img/js/hero/${router.query.heroId}.js`).then(
               (res)=>{
                   console.log('远程数据结果：',res)
                   resolve(res.data)

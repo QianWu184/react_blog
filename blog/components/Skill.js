@@ -17,7 +17,7 @@ const Skill = () => {
               </span>
             }
               key={index}>
-              {item.description}
+              <div dangerouslySetInnerHTML={{__html: item.description}}></div>
           </TabPane>
           )
         })

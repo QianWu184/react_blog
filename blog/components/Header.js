@@ -3,6 +3,9 @@ import Link from 'next/link';
 import "../public/style/components/header.css";
 import { Row, Col, Menu, Icon } from "antd";
 
+function msg() { 
+  alert('未开放')
+}
 const Header = () => {
   return (
     <div className="header">
@@ -18,12 +21,12 @@ const Header = () => {
               首页
               <Link href='/'><a></a></Link>
             </Menu.Item>
-            <Menu.Item key="youtube">
+            <Menu.Item key="youtube" onClick={msg}>
               <Icon type="youtube"></Icon>
               技术
               <Link href='/'><a></a></Link>
             </Menu.Item>
-            <Menu.Item key="life">
+            <Menu.Item key="life" onClick={msg}>
               <Icon type="smile"></Icon>
               生活
               <Link href='/'><a></a></Link>
